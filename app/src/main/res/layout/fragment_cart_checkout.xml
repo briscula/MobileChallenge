@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/coordinatorLayoutProducts"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.ProductsFragment">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="88dp"
+    android:scrollbars="horizontal"
+    tools:listitem="@layout/item_cart_product" />
+
+  <Button
+    android:id="@+id/bDoCheckout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_margin="16dp"
+    android:background="@drawable/button_call_to_action"
+    android:gravity="center"
+    android:text="@string/checkout"
+    android:textColor="@android:color/white"
+    app:layout_behavior="com.cabify.challenge.core.ui.widget.behavior.FloatingViewBehavior" />
+
+  <TextView
+    android:id="@+id/tvEmptyCart"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:text="@string/empty_cart"
+    android:textSize="24sp"
+    android:textStyle="bold"
+    android:visibility="gone"
+    tools:visibility="visible" />
+
+</FrameLayout>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:id="@+id/coordinatorLayoutProducts"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent"
+  tools:context=".ui.ProductsFragment">
+
+  <androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingBottom="88dp"
+    android:scrollbars="horizontal"
+    tools:listitem="@layout/item_product" />
+
+  <Button
+    android:id="@+id/bShowCart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:layout_margin="16dp"
+    android:background="@drawable/button_call_to_action"
+    android:gravity="center"
+    android:text="@string/viewCart"
+    android:textColor="@android:color/white"
+    app:layout_behavior="com.cabify.challenge.core.ui.widget.behavior.FloatingViewBehavior" />
+
+  <ProgressBar
+    android:id="@+id/progressBar"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center" />
+
+  <ViewStub
+    android:id="@+id/vsErrorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout="@layout/view_error" />
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="colorPrimary">#6948FF</color>
+  <color name="colorPrimaryDark">#5332E2</color>
+  <color name="colorAccent">#6948FF</color>
+  <color name="colorBackground">#F4F5F2</color>
+
+  <color name="productCardBackground">#F6F6F6</color>
+  <color name="colorSnackBarConfirmation">#ff4caf50</color>
+</resources>

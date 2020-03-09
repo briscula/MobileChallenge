@@ -1,0 +1,22 @@
+<resources>
+  <string name="app_name">Store Challenge</string>
+  <string name="something_went_wrong">It\'s not you, it\'s me, but&#8230; Something doesn\'t work\n:-(</string>
+  <string name="try_again">Try again!</string>
+
+  <!-- product list -->
+  <string name="products">Products</string>
+  <string name="product_added_to_cart">%1$s added to cart</string>
+  <string name="viewCart">View cart</string>
+
+  <!-- checkout -->
+  <string name="discount_voucher_2x1">2-for-1 offer on vouchers</string>
+  <string name="discount_tshirt_bulk">bulk offer on T-shirts</string>
+  <string name="checkout">Checkout</string>
+  <string name="empty_cart">Empty cart</string>
+  <string name="clear_cart">Clear cart</string>
+  <string name="error_payment_tittle">Error</string>
+  <string name="error_payment_message">There were any issue with the payment</string>
+  <string name="success_payment_tittle">Paid</string>
+  <string name="success_payment_message">Enjoy your buy! Thanks!</string>
+
+</resources>

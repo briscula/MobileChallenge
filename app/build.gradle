@@ -1,0 +1,77 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: 'kotlin-kapt'
+
+android {
+  compileSdkVersion 29
+  buildToolsVersion "29.0.2"
+  defaultConfig {
+    applicationId "com.cabify.challenge.store"
+    minSdkVersion rootProject.minSdkVersion
+    targetSdkVersion rootProject.targetSdkVersion
+    versionCode 1
+    versionName "1.0"
+    testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+  }
+  buildTypes {
+    release {
+      minifyEnabled false
+      proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+    }
+  }
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  kotlinOptions {
+    jvmTarget = JavaVersion.VERSION_1_8.toString()
+  }
+  android {
+    sourceSets {
+      String sharedTestDir = 'src/sharedTest/java'
+      test {
+        java.srcDir sharedTestDir
+      }
+      androidTest {
+        java.srcDir sharedTestDir
+      }
+    }
+  }
+  testOptions {
+    unitTests.returnDefaultValues = true
+    animationsDisabled = true
+  }
+}
+
+dependencies {
+  implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+  implementation "androidx.appcompat:appcompat:$appCompatVersion"
+  implementation "androidx.core:core-ktx:$coreKtxVersion"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
+  implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion"
+  implementation "org.koin:koin-android:$koinVersion"
+  implementation "androidx.navigation:navigation-fragment-ktx:$navigationVersion"
+  implementation "androidx.navigation:navigation-ui-ktx:$navigationVersion"
+  kapt "androidx.room:room-compiler:$roomVersion"
+  implementation "androidx.room:room-runtime:$roomVersion"
+  implementation "androidx.room:room-ktx:$roomVersion"
+  implementation "com.squareup.retrofit2:retrofit:$retrofitVersion"
+  implementation "com.squareup.retrofit2:converter-gson:$retrofitVersion"
+  implementation "androidx.constraintlayout:constraintlayout:$constraintlayoutVersion"
+
+  testImplementation "junit:junit:$junitVersion"
+  testImplementation "io.mockk:mockk:$mockkVersion"
+  testImplementation "com.squareup.okhttp3:mockwebserver:$okHttpVersion"
+  testImplementation 'commons-io:commons-io:2.6'
+  testImplementation "org.jetbrains.kotlinx:kotlinx-coroutines-test:$coroutinesVersion"
+
+  androidTestImplementation("com.schibsted.spain:barista:$baristaVersion") {
+    exclude group: 'org.jetbrains.kotlin'
+  }
+  androidTestImplementation "io.mockk:mockk-android:$mockkVersion"
+  androidTestImplementation "androidx.test.ext:junit:$androidTestJunit"
+  androidTestImplementation "androidx.test.espresso:espresso-core:$espressoVersion"
+  debugImplementation "androidx.fragment:fragment-testing:$fragmentTestingVersion"
+}

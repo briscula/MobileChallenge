@@ -1,0 +1,18 @@
+<resources>
+
+  <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+    <item name="colorPrimary">@color/colorPrimary</item>
+    <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <item name="colorAccent">@color/colorAccent</item>
+    <item name="android:windowBackground">@color/colorBackground</item>
+  </style>
+
+  <style name="Toolbar" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+  <style name="styleButtonRetry">
+    <item name="android:background">@drawable/button_retry</item>
+    <item name="android:textColor">@color/colorAccent</item>
+    <item name="android:paddingStart">8dp</item>
+    <item name="android:paddingEnd">8dp</item>
+  </style>
+</resources>
